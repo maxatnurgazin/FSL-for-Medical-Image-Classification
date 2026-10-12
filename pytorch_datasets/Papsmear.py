@@ -14,7 +14,7 @@ class Papsmear(ImageFolder):
         loader: Callable[[str], Any] = default_loader,
     ):
         transforms = transform or default_transform(image_size, training=training)
-        super().__init__(root, transforms, target_transform, loader, is_valid_file)
+        super().__init__(root, transforms,  loader = loader, is_valid_file = is_valid_file, target_transform = None,)
     def get_labels(self):
         return self.targets
     

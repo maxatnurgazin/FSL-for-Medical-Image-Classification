@@ -1,0 +1,13 @@
+# Preliminary: versions inferred from the code and its dates (early-mid 2023).
+# Python 3.10 (the final experiments ran on 3.10.11).
+# If you still have the original environment, replace this file with its `pip freeze` output.
+
+torch==2.0.1
+torchvision==0.15.2
+timm==0.9.2        # Swin's classifier is at head.fc only from timm 0.9 onward
+easyfsl==1.3.0     # first release where easyfsl.utils.evaluate() accepts tqdm_prefix
+numpy==1.23.5      # augmentations.py uses np.int, removed in numpy 1.24
+pandas==1.5.3      # dataset loaders rely on pre-2.0 indexing/inplace behaviour
+pillow
+tqdm
+tensorboard        # reptile_runner.py imports torch.utils.tensorboard at module level

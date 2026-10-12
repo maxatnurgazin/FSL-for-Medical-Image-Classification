@@ -59,7 +59,7 @@ class BreakHis(FewShotDataset):
 
         label = self.data.iloc[index].label
 
-        return img, label
+        return img, int(label)
 
     def __len__(self):
         return len(self.data)

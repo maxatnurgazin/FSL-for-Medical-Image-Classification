@@ -54,7 +54,7 @@ class ISIC2018(FewShotDataset):
 
         label = self.data[index]
 
-        return img, label
+        return img, int(label)
 
     def __len__(self):
         return len(self.data)
